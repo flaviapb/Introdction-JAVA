@@ -18,11 +18,6 @@ public class AreaDeUmCirculo {
 		area = (raio * raio) * PI;
 		
 		System.out.printf("A rea do seu circulo com raio de %.1f é %.1f",raio,area);
-
-		
-		
-		
-
 	}
 
 }
