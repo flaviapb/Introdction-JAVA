@@ -19,14 +19,10 @@ public class CalculatorAnoDeNascimento {
 			System.out.printf("Sua idade no ano de %d é %d.",anoAtual,(anoAtual-ano));
 			
 		} else {
-			System.out.print("Ano de nascimento maior que ano atual");
+			System.out.print("Ano de nascimento maior que ano atual.");
 
 		}
 		
-		
-		
-		
-
 	}
 
 }
