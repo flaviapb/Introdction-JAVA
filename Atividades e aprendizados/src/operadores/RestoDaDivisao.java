@@ -18,8 +18,5 @@ public class RestoDaDivisao {
 		
 		System.out.printf("Sua divisão é %.0f \n",num1/num2);
 		System.out.printf("O resto da sua divisião é %.1f",num1%num2);
-		
-
 	}
-
 }
