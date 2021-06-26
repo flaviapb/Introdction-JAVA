@@ -14,6 +14,12 @@ public class NumerosParesDe1Ate100 {
 				
 			}
 			
+			else {
+				
+				System.out.printf("%d é impar\n", num);
+				
+			}
+			
 			num++;
 		}
 		
