@@ -9,7 +9,7 @@ public class De1Ate5 {
 		input = new Scanner(System.in);
 		int num;
 		
-		System.out.println("Digite um número entre 1 e 5");
+		System.out.println("Digite um número entre 1 e 5:");
 		num = input.nextInt();
 		
 		switch (num) {
