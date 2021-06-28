@@ -9,7 +9,7 @@ public class NotasDeAlunos {
 		
 		input = new Scanner(System.in);
 		int numalunos = 5;
-		double[] notas = new double[numalunos];
+		double[] notas = new double[numalunos]; // Aqui é um array unidimensional.
 		
 		for (int i = 0; i < numalunos; i++) {
 			
