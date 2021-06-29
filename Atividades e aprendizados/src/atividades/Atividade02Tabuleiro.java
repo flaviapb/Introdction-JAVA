@@ -5,6 +5,7 @@ import java.util.*;
 public class Atividade02Tabuleiro {
 
 	private static Scanner input;
+		
 	public static void main(String[] args) {
 		
 		input = new Scanner(System.in);
@@ -34,6 +35,7 @@ public class Atividade02Tabuleiro {
 				{" ","-------------------"},
 				{" "," ","2","3","4","5","6","7","8","9"}};
 	
+		
 		
 		// IMPRIMINDO O TABULEIRO SEM MOVIMENTAÇÃO ALGUMA
 		for (int i = 0; i < tabuleiro.length; i++) {
