@@ -1,5 +1,10 @@
 package atividades;
 
+/*
+ * @author FláviaRenata
+ * 
+ * */
+
 import java.util.*;
 
 public class CamisaPrincipal {
@@ -9,9 +14,9 @@ public class CamisaPrincipal {
 		
 		input = new Scanner(System.in);
 		
-		String nome;
-		String corescolha;
-		String tipoescolha;
+		String nome; // nome do cliente
+		String corescolha; //cor escolhida da camisa
+		String tipoescolha; //tipo escolhida da camissa
 		
 		Camisa camisaescolhida = new Camisa();
 		

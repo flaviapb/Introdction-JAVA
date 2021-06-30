@@ -38,7 +38,7 @@ public class PrincipalContaCorrente {
 		saldoinicial = input.nextDouble();
 		conta.setsaldo(saldoinicial);
 		
-		Date dataatual = new Date();
+		Date dataatual = new Date(); //Pegando a data atual do sistema.
 		conta.setdata(dataatual);
 		
 	
@@ -55,7 +55,7 @@ public class PrincipalContaCorrente {
 		transferencia = input.nextDouble();
 		conta.Transferir(transferencia);
 		
-		saldofinal = ((saldoinicial + deposito) - saque - transferencia);
+		saldofinal = ((saldoinicial + deposito) - saque - transferencia); //Calculando o saldo final, ou seja, depois de todas as operações.
 		
 		conta.Exibirnome();
 		

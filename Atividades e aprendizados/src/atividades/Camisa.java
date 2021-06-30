@@ -1,5 +1,10 @@
 package atividades;
 
+/*
+ * @author FláviaRenata
+ * 
+ * */
+
 public class Camisa {
 	
 	private String nome; // nome de quem vai comprar a camisa
