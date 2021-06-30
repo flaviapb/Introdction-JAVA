@@ -1,23 +1,65 @@
 package atividades;
 
+/*
+ * @author FláviaRenata
+ * 
+ * */
+
+import java.util.*;
+
 public class PrincipalContaCorrente {
 
+	private static Scanner input;
 	public static void main(String[] args) {
 		
+		input = new Scanner(System.in);
 		ContaCorrente conta = new ContaCorrente();
 		
-		conta.setNome("Flávia");
-		conta.setSobrenome("Renata");
-		conta.setCpf("123.456.789-29");
-		conta.setnumero("99419-6563");
-		conta.setsaldo(5000);
-		conta.setdata("30/06/2021");
+		String nome,sobrenome,cpf,numero;
+		double saldoinicial, saldofinal, deposito,saque,transferencia;
+		
+		System.out.println("Digite seu nome: ");
+		nome = input.next();
+		conta.setNome(nome);
+		
+		System.out.println("\nDigite seu sobrenome: ");
+		sobrenome = input.next();
+		conta.setSobrenome(sobrenome);
+		
+		System.out.println("\nDigite seu CPF: ");
+		cpf = input.next();
+		conta.setCpf(cpf);
+		
+		System.out.println("\nDigite seu número de telefone: ");
+		numero = input.next();
+		conta.setnumero(numero);
+		
+		System.out.println("\nDigite seu Saldo: ");
+		saldoinicial = input.nextDouble();
+		conta.setsaldo(saldoinicial);
+		
+		Date dataatual = new Date();
+		conta.setdata(dataatual);
+		
+	
+		System.out.println("\nDigite o valor do seu deposito para sua conta: ");
+		deposito = input.nextDouble();
+		conta.Depositar(deposito);
+		
+		
+		System.out.println("\nDigite o valor do seu saque: ");
+		saque = input.nextDouble();
+		conta.Sacar(saque);
+		
+		System.out.println("\nDigite o valor da sua tranferencia: ");
+		transferencia = input.nextDouble();
+		conta.Transferir(transferencia);
+		
+		saldofinal = ((saldoinicial + deposito) - saque - transferencia);
 		
 		conta.Exibirnome();
-		conta.Depositar(300);
-		conta.Sacar(200);
-		conta.Transferir(100);
-		conta.ExibirExtrato();
+		
+		conta.ExibirExtrato(cpf,nome,sobrenome,saldofinal,(saldoinicial + deposito));
 	}
 
 }

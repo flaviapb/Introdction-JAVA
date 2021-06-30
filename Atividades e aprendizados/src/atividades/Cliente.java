@@ -1,5 +1,10 @@
 package atividades;
 
+/*
+ * @author FláviaRenata
+ * 
+ * */
+
 public class Cliente{
 
 	private String nome;
@@ -33,9 +38,5 @@ public class Cliente{
 	
 	public void Exibirnome() {
 		System.out.printf("\nNome do cliente1: %s\n", nome);
-	}
-	
-	
-	
-	
+	}	
 }

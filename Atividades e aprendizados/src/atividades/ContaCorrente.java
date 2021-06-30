@@ -1,10 +1,17 @@
 package atividades;
 
-public class ContaCorrente extends Cliente{
+import java.util.Date;
+
+/*
+ * @author FláviaRenata
+ * 
+ * */
+
+public class ContaCorrente extends Cliente{ //Usei um conceito chamado herança, ou seja, a classe ContaCorrente tem acesso aos gets e sets da class Cliente.
 
 	private String numero;
 	private double saldo;
-	private String data;
+	private Date data;
 		
 	
 	public String getnumero() {
@@ -16,12 +23,12 @@ public class ContaCorrente extends Cliente{
 	}
 	
 	
-	public String getdata() {
+	public Date getdata() {
 		return data;
 	}
 	
-	public void setdata(String data) {
-		this.data = data;
+	public void setdata(Date dataatual) {
+		this.data = dataatual;
 	}
 	
 	public double getsaldo() {
@@ -58,9 +65,13 @@ public class ContaCorrente extends Cliente{
 	
 	
 
-	public void  ExibirExtrato() {
-		System.out.printf("\nO número do cliente é : %s\n",numero);
-		System.out.printf("O saldo inicial : %.1f\n",saldo);
+	public void  ExibirExtrato(String cpf, String nome, String sobrenome, double saldofinal,double saldoinicial) {
+		System.out.println("\n----------------------------- Mini extrato----------------------------------\n");
+		System.out.printf("O nome e sobrenome do cliente: %s %s\n",nome,sobrenome);
+		System.out.printf("O número do cliente é : %s\n",numero);
+		System.out.printf("O CPF do cliente: %s\n",cpf);
+		System.out.printf("O saldo inicial : %.1f\n",saldoinicial);
+		System.out.printf("O saldo final: %.1f\n",saldofinal);
 		System.out.printf("A data de acesso foi: %s\n",data);
 		
 	}
