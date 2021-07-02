@@ -9,8 +9,9 @@ public class RetanguloPrincipal {
 		String numaltura, numbase;
 		float altura,base;
 		
+		String nome = JOptionPane.showInputDialog("Digite seu nome: ");
 		
-		JOptionPane.showMessageDialog(null, "Seja bem-vindo(a) a nossa calculadora de área de retângulos");
+		JOptionPane.showMessageDialog(null, "Olá " + nome +" :)\nSeja bem-vindo(a) a nossa calculadora de área de retângulos");
 		
 		numaltura = JOptionPane.showInputDialog("Digite a altura do retângulo: ");
 		altura = Float.parseFloat(numaltura);
