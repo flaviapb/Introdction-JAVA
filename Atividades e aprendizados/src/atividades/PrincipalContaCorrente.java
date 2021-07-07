@@ -20,15 +20,14 @@ public class PrincipalContaCorrente {
 		
 		System.out.println("Digite seu nome: ");
 		nome = input.next();
-		conta.setNome(nome);
 		
 		System.out.println("\nDigite seu sobrenome: ");
 		sobrenome = input.next();
-		conta.setSobrenome(sobrenome);
+		
 		
 		System.out.println("\nDigite seu CPF: ");
 		cpf = input.next();
-		conta.setCpf(cpf);
+		
 		
 		System.out.println("\nDigite seu número de telefone: ");
 		numero = input.next();
@@ -56,8 +55,6 @@ public class PrincipalContaCorrente {
 		conta.Transferir(transferencia);
 		
 		saldofinal = ((saldoinicial + deposito) - saque - transferencia); //Calculando o saldo final, ou seja, depois de todas as operações.
-		
-		conta.Exibirnome();
 		
 		conta.ExibirExtrato(cpf,nome,sobrenome,saldofinal,(saldoinicial + deposito));
 	}
