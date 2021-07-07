@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/sobreMap/Estudando p_ apresentação.pdf</name>
+			<type>1</type>
+			<location>C:/Users/flavi/Downloads/Estudando p_ apresentação.pdf</location>
+		</link>
+	</linkedResources>
 </projectDescription>
