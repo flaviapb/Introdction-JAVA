@@ -69,7 +69,7 @@ public class CadastroDosJogadores {
 
 		
 		System.out.println("\n---------------------------------------------JOGADOR TREINOU--------------------------------------------------------");
-		//Atribuindo treinamento, já que está com lesão
+		//Atribuindo treinamento para toda equipe
 				for (int i = 0; i<11; i++) {
 					lista_jogadores.get(i).executarTreinamento();
 					System.out.println("\n O jogador "+ lista_jogadores.get(i).getNome() + " participou do treinamento e sua qualidade subiu para: " +
