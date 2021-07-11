@@ -7,6 +7,11 @@ public class Jogadores {
 	private TipoDoJogador posicao; //enum da outra questão;
 	private Selecao nomeselecao;
 	
+	
+	public Jogadores() {
+		
+	}
+	
 	public Jogadores(int id,String nome, String apelido, TipoDoJogador posicao, Selecao nomeselecao, int qualidade) {
 		
 		this.id = id;
@@ -14,6 +19,7 @@ public class Jogadores {
 		this.apelido = apelido;
 		this.posicao = posicao;
 		this.nomeselecao = nomeselecao;
+		this.qualidade = qualidade;
 	}
 	
 	public String getNome() {
