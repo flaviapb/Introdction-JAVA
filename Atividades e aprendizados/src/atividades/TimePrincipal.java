@@ -64,21 +64,30 @@ public class TimePrincipal {
 		//CADASTRANDO TIME FLAMENGO
 		TimeFutebol flamengo = new TimeFutebol(Selecao.FLAMENGO, "17/11/1895", selecaoFlamengo);
 		
+
+		//MOSTRANDO COMO O TIME DO BRASIL FOI ESCALADO
+		System.out.println("\n	  			--------------------------------Seleção Brasil-----------------------------------------");
+		for(Jogadores jogador : selecaoBrasil) {
+			System.out.println(jogador.getId() + " --> " + jogador.getNome() + " --> " + jogador.getApelido() +
+					"   " + jogador.getPosicao() + " --> " + jogador.getNomeselecao() + " --> " + jogador.getQualidade() + "\n");
+		}
+		
+		//MOSTRANDO COMO O TIME DO FLAMENGO FOI ESCALADO
+		System.out.println("\n				-------------------------------Seleção Flamengo--------------------------------------");
+		for(Jogadores jogador2 : selecaoFlamengo) {
+			System.out.println(jogador2.getId() + " --> " + jogador2.getNome() + " --> " + jogador2.getApelido() +
+					"   " + jogador2.getPosicao() + " --> " + jogador2.getNomeselecao() + " --> " + jogador2.getQualidade() + "\n"); 
+		}
+		
+		//CONSIDERANDO AS QUALIDADES E COLOCANDO DE FORMA DECRESCENTE OS DOIS TIMES
+		System.out.println("\n      ----------------------------------Seleção Flamengo de forma decrescente------------------------------\n"+
+		"			LISTA FEITA PARA MOSTRAR DO MELHOR PARA PIOR JOGADOR, DE ACORDO COM AS QUALIDADES.\n");
 		flamengo.relacionarJogadores(selecaoFlamengo);
 		
-		System.out.println("----------------------------Seleção Brasil------------------------------------");
-		for(Jogadores jogador : selecaoBrasil) {
-			System.out.println(jogador.getId() + "   " + jogador.getNome() + "   " + jogador.getApelido() +
-					"   " + jogador.getPosicao() + "  " + jogador.getNomeselecao() + "  " + jogador.getQualidade() + "\n");
-		}
-		
-		System.out.println("\n----------------------------Seleção Flamengo------------------------------------");
-		for(Jogadores jogador2 : selecaoFlamengo) {
-			System.out.println(jogador2.getId() + "   " + jogador2.getNome() + "   " + jogador2.getApelido() +
-					"   " + jogador2.getPosicao() + "  " + jogador2.getNomeselecao() + "  " + jogador2.getQualidade() + "\n");
-		}
-		
-		
+		System.out.println("\n		-------------------------------------Seleção Brasil de forma decrescente--------------------------------\n"+
+				"			LISTA FEITA PARA MOSTRAR DO MELHOR PARA PIOR JOGADOR, DE ACORDO COM AS QUALIDADES.\n");
+		brasil.relacionarJogadores(selecaoBrasil);
+				
 	}
 
 }

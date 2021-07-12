@@ -1,16 +1,14 @@
 package atividades;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TimeFutebol{
 	
 	private Jogadores dados;
-	private ArrayList<Jogadores> relacionados, time;
+	private ArrayList<Jogadores> time,relacionados;
 	private Selecao nomeTime;
 	private String fundacao;
-	
-	
-	
 	
 	public TimeFutebol(Selecao nomeTime, String fundacao, ArrayList<Jogadores> time) {
 		this.nomeTime = nomeTime;
@@ -18,15 +16,20 @@ public class TimeFutebol{
 		this.time = time;
 	}
 	
-	
+	//Selecionei os 23 jogadores, de forma decrescente
 	public void relacionarJogadores(ArrayList<Jogadores> relacionados) {
-		dados.getQualidade();
+		int totalRelacionados = 23;
 		
-		System.out.print(dados.getQualidade());
+		Collections.sort(time, new ComparandoQualidades());
+		
+		for (int i = 0; i < totalRelacionados; i++) {
+			
+			relacionados.add(time.get(i));
+			System.out.print(relacionados.get(i).getId() + " --> " + relacionados.get(i).getNome() + " --> " + relacionados.get(i).getQualidade() + "\n");
+			System.out.print("\n");
+		}
 	}
-	
-	
-	
+		
 	public Jogadores getDados() {
 		return dados;
 	}
@@ -40,12 +43,25 @@ public class TimeFutebol{
 		return time;
 	}
 
-
 	public void setTime(ArrayList<Jogadores> time) {
 		this.time = time;
 	}
 
+	public Selecao getNomeTime() {
+		return nomeTime;
+	}
 
+	public void setNomeTime(Selecao nomeTime) {
+		this.nomeTime = nomeTime;
+	}
+
+	public String getFundacao() {
+		return fundacao;
+	}
+
+	public void setFundacao(String fundacao) {
+		this.fundacao = fundacao;
+	}
 
 
 	public ArrayList<Jogadores> getRelacionados() {
@@ -53,37 +69,8 @@ public class TimeFutebol{
 	}
 
 
-
-
 	public void setRelacionados(ArrayList<Jogadores> relacionados) {
 		this.relacionados = relacionados;
 	}
 
-
-
-
-	public Selecao getNomeTime() {
-		return nomeTime;
-	}
-
-
-
-
-	public void setNomeTime(Selecao nomeTime) {
-		this.nomeTime = nomeTime;
-	}
-
-
-
-
-	public String getFundacao() {
-		return fundacao;
-	}
-
-
-
-
-	public void setFundacao(String fundacao) {
-		this.fundacao = fundacao;
-	}
 }

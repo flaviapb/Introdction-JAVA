@@ -22,6 +22,7 @@ public class Jogadores {
 		this.qualidade = qualidade;
 	}
 	
+	
 	public String getNome() {
 		return nome;
 	}
@@ -67,5 +68,5 @@ public class Jogadores {
 	public void setNomeselecao(Selecao nomeselecao) {
 		this.nomeselecao = nomeselecao;
 	}
-
+	
 }
