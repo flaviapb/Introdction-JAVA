@@ -1,30 +1,31 @@
 package atividades;
 
+import java.util.ArrayList;
+
 public class ItemOrcamentoComplexo extends ItemOrcamento {
 	
-	ItemOrcamento subItems[];
+	private ArrayList<ItemOrcamento> subItens;
 	 
-	public ItemOrcamentoComplexo(String historico, float valor, ItemOrcamento subItems[]) {
-		super (historico,valor);
+	public ItemOrcamentoComplexo(ArrayList<ItemOrcamento> subItens) {
+		this.subItens = subItens;
 	}
-	
+	 
 	public float getValor() {
 		float somaItens = 0;
-		
-		for (int i = 0; i < subItems.length; i++) { 
-			somaItens += subItems[i].getValor();
+		for (ItemOrcamento itens: subItens) { 
+			somaItens += itens.getValor(); 
 		}
 		return somaItens;
 	}
 	
 	
-	
-	public ItemOrcamento encontrarItem(String historico) {
-		for (int i = 0; i < subItems.length; i++) {
-			if(this.subItems[i].getHistorico().equals(historico)) {
-				return subItems[i];
-			}
-		}
-		return null;
+	@SuppressWarnings("unlikely-arg-type")
+	public String encontreItem(String historico) {
+		if(subItens.contains(historico)){
+	         return "encontra-se na lista de itens.";
+	    }else{
+	         return "não se encontra na lista de itens.";
+	     }
 	}
+		
 }

@@ -10,6 +10,10 @@ public class ItemOrcamento {
 		this.valor = valor;
 	}
 	
+	public ItemOrcamento() {
+		
+	}
+	
 	public String getHistorico() {
 		return historico;
 	}
