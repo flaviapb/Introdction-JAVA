@@ -16,10 +16,10 @@ public class DespesasTotal{
 		return cpf;
 	}
 	
-	public int totalMes( int vezesdaCompra) {
-		int soma = vezesdaCompra;
+	public float totalMes( int mes) {
+		float soma = 0;
 		for (int i = 0; i < totaldispesa.size(); i++) {
-			soma *= (totaldispesa.get(i).getValor());
+			soma += (totaldispesa.get(i).getValor());
 		}
 		
 		return soma;
