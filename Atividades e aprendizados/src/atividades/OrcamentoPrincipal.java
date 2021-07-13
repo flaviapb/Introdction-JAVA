@@ -19,6 +19,7 @@ public class OrcamentoPrincipal {
 		qntfinal = JOptionPane.showInputDialog(null, "Quantos produtos você quer adicionar? ");
 		qntdfinal = Integer.parseInt(qntfinal);
 
+		System.out.println("\n-------------------------------Cadastro dos produtos-------------------------------------\n");
 
 		for (int i = 0; i < qntdfinal; i++) {
 			
@@ -30,25 +31,34 @@ public class OrcamentoPrincipal {
 			listageral.add(new ItemOrcamento(nomeproduto, valorproduto));				
 		}
 		
-		
+		System.out.println("\n----------------------------------------------------------------------------------------\n");
+
 		ItemOrcamentoComplexo item = new ItemOrcamentoComplexo(listageral);
 		
-		System.out.println(item.getValor());
+		System.out.println("\n------------------------------------Soma total------------------------------------------\n");
 		
-		String procurar;
+		System.out.println("A soma de todos os produtos cadastrados: " + item.getValor());
+		
+		System.out.println("\n----------------------------------------------------------------------------------------\n");
+
+		String procurar,vezes;
+		int vezesPesquisar;
 	
-		System.out.print("\nDigite o nome do produto: ");
-		procurar = input.next();
-		System.out.println(item.encontreItem(procurar));
+		vezes = JOptionPane.showInputDialog("Digite quantos produtos você quer procurar: ");
+		vezesPesquisar = Integer.parseInt(vezes);
 		
+		System.out.println("\n------------------------------------Procurar na lista-------------------------------------\n");
 		
+		for (int i = 0; i < vezesPesquisar; i++) {
+			System.out.print("\nDigite o nome do produto: ");
+			procurar = input.next();
+			
+			System.out.print(item.encontreItem(procurar)+"\n");
+		}
 		
-
+		System.out.println("\n----------------------------------------------------------------------------------------\n");
 		
-		
-
-
-		
+	
 		
 	}
 }

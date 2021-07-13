@@ -19,13 +19,12 @@ public class ItemOrcamentoComplexo extends ItemOrcamento {
 	}
 	
 	
-	@SuppressWarnings("unlikely-arg-type")
 	public String encontreItem(String historico) {
-		if(subItens.contains(historico)){
-	         return "encontra-se na lista de itens.";
-	    }else{
-	         return "não se encontra na lista de itens.";
-	     }
-	}
-		
+		for(ItemOrcamento itens: subItens){
+	        if (itens.getHistorico().equals(historico)){
+	           return "Esse produto se encontra na lista de itens";
+	        }
+	    }
+	       return "Esse produto não se encontra na lista de itens";
+	}	
 }
