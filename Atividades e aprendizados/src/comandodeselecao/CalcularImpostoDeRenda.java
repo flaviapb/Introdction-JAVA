@@ -34,7 +34,7 @@ public class CalcularImpostoDeRenda {
 		
 		if (salario > 4753.96) {
 			
-			System.out.printf("Seu imposto é de 879,85$, logo seu salário final é de %.2 f",(salario-879.85));
+			System.out.printf("Seu imposto é de 879,85$, logo seu salário final é de %.2f",(salario-879.85));
 			
 		}
 	
